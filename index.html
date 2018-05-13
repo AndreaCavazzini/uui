@@ -660,6 +660,30 @@ if (window.location.hash.indexOf('translate') >= 0 && navigator.onLine) {
 			  
 				</div> <!--End of group tiles-->
 			</div> <!-- End of Share Group-->
+
+
+			<!-- SELF EVALUATION GROUP -->
+			<div class="tile-group one">
+				<span class="tile-group-title">Self evaluation</span>
+				<div class="tile-container">
+				
+					<div class="tile bg-selfevaluation fg-white" data-role="tile" onclick="tileClick('./SelfEvaluation/index.html','SelfEvaluational', event);">
+						<div class="tile-content iconic slide-up">
+							<div class="slide-up-2">
+								<span class="mif-question place-right margin5"  onclick="helpClick('#SelfEvaluationDialog', event);"></span>
+								<img class="tile-image icon" src="./images/star-logo.png"/>
+								<span class="tile-label">Self evaluation
+								</span>
+							</div>
+							<div class="slide-over bg-selfevaluation text-small padding10">
+								Evaluate your group performance
+							</div>
+						  </div>
+						  <div data-role="dialog" id="SelfEvaluationDialog" class="padding20" data-close-button="true" data-href="./about/selfevaluation-help.html" data-width="600"></div>
+					</div>
+			  
+				</div> <!--End of group tiles-->
+			</div> <!-- End of self evaluation Group-->
 			
 		</div> <!--End of Main Tile Area-->
 	</div> <!--End of Main Content Container-->
