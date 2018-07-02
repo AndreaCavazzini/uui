@@ -136,7 +136,7 @@
 			padding: 10px;
 		}
 
-		.star-container{
+		.star-container {
 			width: 240px;
 		}
 
@@ -181,7 +181,7 @@
 
 		.star.halfgold::after {
 			content: '\2605';
-			position: absolute;			
+			position: absolute;
 			left: 0;
 			right: 50%;
 			top: 0;
@@ -189,10 +189,10 @@
 			overflow: hidden;
 			color: gold;
 		}
-		
+
 		.star.halfblue::after {
 			content: '\2605';
-			position: absolute;			
+			position: absolute;
 			left: 0;
 			right: 50%;
 			top: 0;
@@ -200,8 +200,6 @@
 			overflow: hidden;
 			color: blue;
 		}
-		
-
 	</style>
 
 	<script>
@@ -411,7 +409,7 @@
 		<div id="achievementsArea" class="flex-container-row container">
 
 			<div class="column flex-container-column">
-				<div class="row" >Programming (1.5)</div>
+				<div class="row">Programming (1.5)</div>
 				<div class="star-container">
 					<span class="star gold"></span>
 					<span class="star halfgold"></span>
@@ -875,36 +873,44 @@
 			<!-- End of Share Group-->
 
 
-			<!-- SELF EVALUATION GROUP -->
-			<div class="tile-group one">
-				<span class="tile-group-title">Achievements</span>
-				<div class="tile-container">
-
-					<div class="tile-small bg-selfevaluation fg-white" data-role="tile" onclick="tileClick('./SelfEvaluation/index.html?p='+(new Date()).getTime() ,'Achievements', event);">
-						<div class="tile-content iconic slide-up">
-							<div class="slide-up-2">
-								<span class="mif-question place-right margin5" onclick="helpClick('#SelfEvaluationDialog', event);"></span>
-								<img class="tile-image icon" src="./images/star-logo.png" />
-								<!--<span class="tile-label">Achievements-->
-								</span>
-							</div>
-							<div class="slide-over bg-selfevaluation text-small padding10">
-								Review your group achievements and evaluate your group performance
-							</div>
-						</div>
-						<div data-role="dialog" id="SelfEvaluationDialog" class="padding20" data-close-button="true" data-href="./about/selfevaluation-help.html"
-						 data-width="600"></div>
-					</div>
-
-				</div>
-				<!--End of group tiles-->
-			</div>
-			<!-- End of self evaluation Group-->
 
 		</div>
 		<!--End of Main Tile Area-->
 	</div>
 	<!--End of Main Content Container-->
+
+
+	<div id="secondaryTileArea" style="padding-bottom: 1em; margin-bottom: 1em">
+
+		<!-- SELF EVALUATION GROUP -->
+		<div class="tile-group one">
+			<span class="tile-group-title">Achievements</span>
+			<div class="tile-container">
+
+				<div class="tile-small bg-selfevaluation fg-white" data-role="tile" onclick="tileClick('./SelfEvaluation/index.html?p='+(new Date()).getTime() ,'Achievements', event);">
+					<div class="tile-content iconic slide-up">
+						<div class="slide-up-2">
+							<span class="mif-question place-right margin5" onclick="helpClick('#SelfEvaluationDialog', event);"></span>
+							<img class="tile-image icon" src="./images/star-logo.png" />
+							<!--<span class="tile-label">Achievements-->
+							</span>
+						</div>
+						<!--<div class="slide-over bg-selfevaluation text-small padding10">
+							Review your group achievements and evaluate your group performance
+						</div>-->
+					</div>
+					<div data-role="dialog" id="SelfEvaluationDialog" class="padding20" data-close-button="true" data-href="./about/selfevaluation-help.html"
+					 data-width="600"></div>
+				</div>
+
+			</div>
+			<!--End of group tiles-->
+		</div>
+		<!-- End of self evaluation Group-->
+
+
+	</div>
+
 
 	<!--Login Box and Hidden Data-->
 	<div id="loginForm" class="login-form padding20 block-shadow" style="z-index:2;">
