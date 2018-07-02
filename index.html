@@ -18,6 +18,8 @@
 	<link href="libraries/css/metro-schemes.css" rel="stylesheet">
 	<link href="libraries/css/metro-icons.css" rel="stylesheet">
 
+	<link rel="stylesheet" href="bower_components/css-star-rating/dist/css/star-rating.css">
+
 	<script src="libraries/js/metro.js"></script>
 
 	<!-- Sentry will report bugs to us -->
@@ -105,6 +107,101 @@
 
 			margin: auto;
 		}
+
+		.container {
+
+			justify-content: center;
+			align-items: center;
+		}
+
+		.flex-container-column {
+			display: flex;
+			flex-direction: column;
+			flex-wrap: nowrap;
+		}
+
+		.flex-container-row {
+			padding: 10px;
+			display: flex;
+			flex-wrap: nowrap;
+		}
+
+		.column {
+			padding: 10px;
+			width: auto;
+		}
+
+		.row {
+			width: auto;
+			padding: 10px;
+		}
+
+		.star-container{
+			width: 240px;
+		}
+
+		.star {
+			font-size: 1.5em;
+			display: inline-block;
+			color: gray;
+			position: relative;
+		}
+
+		.star:last-child {
+			margin-right: 0;
+		}
+
+		.star:before {
+			content: '\2605';
+		}
+
+		.star.gold {
+			color: gold;
+		}
+
+		.star.red {
+			color: red;
+		}
+
+		.star.blue {
+			color: blue;
+		}
+
+		.star.green {
+			color: green;
+		}
+
+		.star.fuchsia {
+			color: fuchsia;
+		}
+
+		.star.lightcoral {
+			color: lightcoral;
+		}
+
+		.star.halfgold:after {
+			content: '\2605';
+			position: absolute;			
+			left: 0;
+			right: 50%;
+			top: 0;
+			bottom: 0;
+			overflow: hidden;
+			color: gold;
+		}
+		
+		.star.halfblue:after {
+			content: '\2605';
+			position: absolute;			
+			left: 0;
+			right: 50%;
+			top: 0;
+			bottom: 0;
+			overflow: hidden;
+			color: blue;
+		}
+		
+
 	</style>
 
 	<script>
@@ -307,6 +404,80 @@
 				<!--(<a href="./help/troubleshooting/" target="_blank">Trouble shooting help</a>)-->
 			</div>
 		</header>
+
+
+		<!-- achievements area-->
+
+		<div id="achievementsArea" class="flex-container-row container">
+
+			<div class="column flex-container-column">
+				<div class="row" >Programming (1.5)</div>
+				<div class="star-container">
+					<span class="star gold"></span>
+					<span class="star halfgold"></span>
+					<span class="star "></span>
+					<span class="star "></span>
+					<span class="star"></span>
+				</div>
+			</div>
+
+			<div class="column flex-container">
+				<div class="row">3D Design (2)</div>
+				<div class="star-container">
+					<span class="star red"></span>
+					<span class="star red"></span>
+					<span class="star "></span>
+					<span class="star "></span>
+					<span class="star"></span>
+				</div>
+			</div>
+
+			<div class="column flex-container">
+				<div class="row">Collaboration (1.7)</div>
+				<div class="star-container">
+					<span class="star blue"></span>
+					<span class="star halfblue"></span>
+					<span class="star "></span>
+					<span class="star "></span>
+					<span class="star"></span>
+				</div>
+			</div>
+
+			<div class="column flex-container">
+				<div class="row">Originality (2.1)</div>
+				<div class="star-container">
+					<span class="star green"></span>
+					<span class="star green"></span>
+					<span class="star "></span>
+					<span class="star "></span>
+					<span class="star"></span>
+				</div>
+			</div>
+
+			<div class="column flex-container">
+				<div class="row">Presentation of the project (3)</div>
+				<div class="star-container">
+					<span class="star fuchsia"></span>
+					<span class="star fuchsia"></span>
+					<span class="star fuchsia"></span>
+					<span class="star "></span>
+					<span class="star"></span>
+				</div>
+			</div>
+
+			<div class="column flex-container">
+				<div class="row">Buildinng the circuit (1)</div>
+				<div class="star-container">
+					<span class="star lightcoral"></span>
+					<span class="star "></span>
+					<span class="star "></span>
+					<span class="star "></span>
+					<span class="star"></span>
+				</div>
+			</div>
+
+		</div>
+
 
 		<!-- TILE AREA -->
 		<div id="mainTileArea" class="tile-area">
@@ -709,12 +880,12 @@
 				<span class="tile-group-title">Achievements</span>
 				<div class="tile-container">
 
-					<div class="tile bg-selfevaluation fg-white" data-role="tile" onclick="tileClick('./SelfEvaluation/index.html?p='+(new Date()).getTime() ,'Achievements', event);">
+					<div class="tile-small bg-selfevaluation fg-white" data-role="tile" onclick="tileClick('./SelfEvaluation/index.html?p='+(new Date()).getTime() ,'Achievements', event);">
 						<div class="tile-content iconic slide-up">
 							<div class="slide-up-2">
 								<span class="mif-question place-right margin5" onclick="helpClick('#SelfEvaluationDialog', event);"></span>
 								<img class="tile-image icon" src="./images/star-logo.png" />
-								<span class="tile-label">Achievements
+								<!--<span class="tile-label">Achievements-->
 								</span>
 							</div>
 							<div class="slide-over bg-selfevaluation text-small padding10">
